@@ -2,8 +2,13 @@
 
 import React, {Component} from "react";
 import {Image, Text, View} from "react-native";
+import {CardDefinition} from "../model/Cards"
 
-export default class CardView extends Component {
+interface CardViewProps {
+  card:CardDefinition
+}
+
+export default class CardView extends Component<CardViewProps> {
 
     render() {
 

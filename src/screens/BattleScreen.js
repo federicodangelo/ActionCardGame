@@ -1,8 +1,14 @@
+//@flow
+
 import React, {Component} from "react";
 import {Button, View} from "react-native";
 import styles from "./Styles";
 
-export default class BattleScreen extends Component {
+interface BattleScreenProps {
+
+}
+
+export default class BattleScreen extends Component<BattleScreenProps> {
     render() {
         return (
             <View style={styles.container}>

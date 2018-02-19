@@ -1,8 +1,14 @@
+//@flow
+
 import React, {Component} from "react";
 import {View} from "react-native";
 import styles from "./Styles";
 
-export default class ChatScreen extends Component {
+interface ChatScreenProps {
+
+}
+
+export default class ChatScreen extends Component<ChatScreenProps> {
     render() {
         return (
             <View style={styles.container}>

@@ -2,9 +2,10 @@
 
 import ImageSourcePropType from "react-native/Libraries/Image/ImageSourcePropType.js"
 
-interface CardDefinition {
+export interface CardDefinition {
     id: string;
-    icon: string
+    icon: ImageSourcePropType;
+    name: string;
 }
 
 function buildCardNameFromId(id:string) : string {

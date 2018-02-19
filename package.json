@@ -15,10 +15,14 @@
     "redux": "^3.7.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-jest": "22.2.2",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "4.0.0",
+    "flow-bin": "^0.66.0",
     "jest": "22.3.0",
-    "react-test-renderer": "16.2.0"
+    "react-test-renderer": "16.2.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "jest": {
     "preset": "react-native"

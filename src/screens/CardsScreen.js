@@ -1,25 +1,38 @@
+//@flow
+
 import React, {Component} from "react";
 import {ScrollView, View} from "react-native";
 import styles from "./Styles";
 import CardView from "../components/CardView";
+import {CardDefinition} from "../model/Cards"
 import {getCardsDefinitions} from "../model/Cards"
 
-export default class CardsScreen extends Component {
+interface CardsScreenProps {
+  cards:CardDefinition[]
+}
+
+export default class CardsScreen extends Component<CardsScreenProps> {
+
+    static defaultProps = {
+      cards:getCardsDefinitions()
+    }
 
     cards = []
 
-    constructor(props) {
+    constructor(props:CardsScreenProps) {
         super(props)
 
-        getCardsDefinitions().forEach((card, i) =>
+        let cards = props.cards;        
+
+        cards.forEach((card, i) =>
             this.cards.push({id: i, card: card})
         );
 
-        getCardsDefinitions().forEach((card, i) =>
+        cards.forEach((card, i) =>
             this.cards.push({id: i + 100, card: card})
         );
 
-        getCardsDefinitions().forEach((card, i) =>
+        cards.forEach((card, i) =>
             this.cards.push({id: i + 200, card: card})
         );
     }
