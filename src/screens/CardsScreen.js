@@ -22,7 +22,7 @@ export default class CardsScreen extends Component<CardsScreenProps> {
     constructor(props:CardsScreenProps) {
         super(props)
 
-        let cards = props.cards;        
+        let cards = props.cards;
 
         cards.forEach((card, i) =>
             this.cards.push({id: i, card: card})
@@ -44,7 +44,7 @@ export default class CardsScreen extends Component<CardsScreenProps> {
                     <View style={{flex: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: 'space-around'}}>
                         {
                             this.cards.map((card) => (
-                                <CardView key={card.id} card={card.card}/>
+                                <CardView key={card.id} card={card.card} id={card.id}/>
                             ))
                         }
                     </View>
